@@ -18,7 +18,26 @@ void func2() {
 
 void func3() {
 	int* ptr = new int(20);
-	cout << "Value:" << *ptr << endl;
+	cout << "Value: " << *ptr << endl;
+}
+
+void func4() {
+	int* ptr = new int(30);
+	cout << "Value: " << *ptr << endl;
+	delete ptr;
+}
+
+void func5() {
+	int* ptr = new int(40);
+	int* ptr2 = ptr;
+
+	cout << "ptr adress = " << ptr << endl;
+	cout << "ptr2 adress = " << ptr2 << endl;
+	cout << *ptr << endl;
+
+	delete ptr;
+
+	cout << *ptr2 << endl;
 }
 
 void createDynamicArray() {
@@ -43,6 +62,8 @@ int main() {
 	func1();
 	func2();
 	func3();
+	func4();
+	func5();
 	createDynamicArray();
 	return 0;
 }
